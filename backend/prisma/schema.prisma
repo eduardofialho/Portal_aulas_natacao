@@ -1,0 +1,34 @@
+// prisma/schema.prisma
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Usuario {
+  id               Int           @id @default(autoincrement())
+  nome             String
+  email            String        @unique
+  dataNascimento   DateTime?
+  senha            String
+  role             String        // Pode ser 'ALUNO' ou 'PROFESSOR'
+  aulasComoAluno   Aula[]        @relation("AulaAluno") // Relação com aulas onde é aluno
+  aulasComoProfessor Aula[]       @relation("AulaProfessor") // Relação com aulas onde é professor
+}
+
+model Aula {
+  id                 Int           @id @default(autoincrement())
+  dia                DateTime
+  horario            DateTime
+  aluno              Usuario?      @relation("AulaAluno", fields: [alunoId], references: [id]) // Relação do aluno
+  alunoId            Int?          // Permitir múltiplos alunos por aula
+  professor          Usuario       @relation("AulaProfessor", fields: [professorId], references: [id]) // Relação do professor
+  professorId        Int
+  disponivel         Boolean       @default(true)
+  remarcadaDeId     Int?          // Referência à aula original que foi remarcada
+}
+

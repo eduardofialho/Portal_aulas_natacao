@@ -1,0 +1,53 @@
+.modal {
+    background: white;
+    border-radius: 12px; /* Bordas arredondadas */
+    padding: 20px;
+    max-width: 500px;
+    width: 90%; /* largura responsiva */
+    transition: all 0.3s ease; /* transição suave */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-calendar {
+    border: 1px solid #e5e5e5; /* borda sutil */
+    border-radius: 8px; /* bordas arredondadas */
+  }
+  
+  /* Estilos para o calendário */
+  .react-calendar {
+    width: 100%;
+    max-width: 400px; /* largura máxima do calendário */
+    background: #ffffff; /* fundo branco */
+    border-radius: 8px; /* bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra suave */
+  }
+  
+  .react-calendar__tile {
+    text-align: center; /* centralizar texto */
+    padding: 10px; /* adicionar padding */
+    border-radius: 8px; /* bordas arredondadas */
+  }
+  
+  .react-calendar__tile--active {
+    background-color: #4f46e5; /* cor de fundo ao selecionar */
+    color: white; /* texto branco */
+  }
+  
+  .react-calendar__tile--now {
+    border: 2px solid #4f46e5; /* borda ao redor do dia atual */
+  }
+  
+  .react-calendar__tile--hover {
+    background: #f3f4f6; /* fundo ao passar o mouse */
+  }
+  
+  /* .react-calendar__month-view__weekdays {
+    color: #9ca3af; /* cor das letras dos dias da semana
+  } */
+  
