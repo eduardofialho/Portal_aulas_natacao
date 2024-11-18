@@ -59,7 +59,7 @@ Este projeto foi desenvolvido por <strong>Igor Rodrigues</strong> utilizando a m
 <h2>🛠️ Instalação e Execução Local</h2>
 <ol>
   <li>Clone o repositório:
-    <pre><code>git clone https://github.com/Portal_aulas_natacao.git</code></pre>
+    <pre><code>git clone https://github.com/igor18456/Portal_aulas_natacao</code></pre>
   </li>
   <li>Certifique-se de que o Node.js está instalado em sua máquina (versão 16 ou superior):
     <pre><code>node -v</code></pre>
